@@ -1,21 +1,25 @@
- #Laradock 
- ##One project one laradock
+# Laradock
+
+## One project one laradock
 
 * To understand what is Laradock [Laradock Habr Article](https://habr.com/ru/post/439346/)
 * [This Tutorial](https://dev.to/moghwan/dockerize-your-laravel-project-with-laradock-2io1)
 * [Laradock Documentation](https://laradock.io/documentation/)
 * [PhpStorm doesn't see root directory](https://stackoverflow.com/questions/48065971/phpstorm-not-showing-project-files-in-project-view)
 
-##Quick Start
+## Quick Start
 
 1. Open /etc/hosts
+
 ```shell
 # /etc/hosts (linux)
 # C:\Windows\System32\drivers\etc\hosts (Windows)
 
 127.0.0.1 laraveldock.test
 ```
+
 2. Prepare Laravel Project
+
 ```shell
 # You can use version 7 or 8
 composer create-project --prefer-dist laravel/laravel laraveldock "7.*.*"
@@ -49,12 +53,13 @@ nginx:
     # - backend
     networks:
         frontend:
-          aliases:
-            - laraveldock.test
+            aliases:
+                - laraveldock.test
         backend:
-          aliases:
-            - laraveldock.test
+            aliases:
+                - laraveldock.test
 ```
+
 4. Building docker images
 
 ```shell
@@ -66,6 +71,7 @@ docker-compose up -d --build nginx mysql
 # for posqtgresql
 docker-compose up -d --build nginx postgres
 ```
+
 5. Setting up database
 
 ```shell
@@ -89,6 +95,7 @@ docker-compose exec mysql bash
 
 exit
 ```
+
 ```shell
 docker-compose exec workspace bash
 artisan migrate

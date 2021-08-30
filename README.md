@@ -112,3 +112,17 @@ docker-compose exec workspace bash
 docker-compose exec php-fpm bash
 ```
 
+## Multiple projects one laradock
+```
+- laradock
+- project1
+- project2
+```
+
+1. Clone Laradock
+2. cp .env.example .env
+3. Build Nginx and Mysql containers
+4. Create Project1 and Project2 in the same directory
+5. Enter to laradock cp laravel.conf project1.conf project2.conf in nginx/sites and rewrite server_name and root path
+6. Add new hosts to etc/hosts
+

@@ -1,7 +1,7 @@
-#Laradock
+ #Laradock 
+ ##One project one laradock
 
 * To understand what is Laradock [Laradock Habr Article](https://habr.com/ru/post/439346/)
-* One project one laradock
 * [This Tutorial](https://dev.to/moghwan/dockerize-your-laravel-project-with-laradock-2io1)
 * [Laradock Documentation](https://laradock.io/documentation/)
 * [PhpStorm doesn't see root directory](https://stackoverflow.com/questions/48065971/phpstorm-not-showing-project-files-in-project-view)
